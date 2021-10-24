@@ -1,6 +1,11 @@
 #include <stdio.h>
+#include "CGAGFX.H"
+
 int main()
 {
-    printf("Pup likes ferals\n");
+    printf("Hello World\n");
+
+    InitCGA();
+
     return 0;
 }
