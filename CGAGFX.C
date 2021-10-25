@@ -22,9 +22,17 @@ void setVideoMode(byte mode)
   int86(VIDEO_INT, &regs, &regs);
 }
 
-int clearScreen()
+void clearScreen(int a_iColour)
 {
-    return 0;
+    for(unsigned int uiDx = 0; uiDx < SCREEN_WIDTH; uiDx++)
+    {
+        for(unsigned int uiDy = 0; uiDy < SCREEN_HEIGHT; uiDy++)
+        {
+            g_ScreenBuffer[uiDx][uiDy] = (byte)a_iColour;
+        }
+    }
+
+    return;
 }
 
 void destroyCGA()
