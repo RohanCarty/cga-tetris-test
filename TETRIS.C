@@ -5,7 +5,11 @@ int main()
 {
     printf("Hello World\n");
 
-    InitCGA();
+    initCGA();
+
+    delay(3000);
+
+    destroyCGA();
 
     return 0;
 }
